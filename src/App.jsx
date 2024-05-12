@@ -10,6 +10,8 @@ import { Happening } from './Components/Happening'
 import MapWithPopups from './Components/MapWithPopups'
 import { Products } from './Components/Products'
 import { OurProducts } from './Components/OurProducts'
+import { AccordinoPage } from './Components/AccordinoPage'
+import { Parntners } from './Components/Parntners'
 
 function App() {
 
@@ -19,10 +21,12 @@ function App() {
       <Banner />
       <AboutUsPage/>
       <Benfits/>
-      <Sustainability/>
       <Products />
+      <Sustainability/>
       <OurProducts/>
       <Happening/>
+      <AccordinoPage />
+      <Parntners />
       <MapWithPopups />
       <Footer/>
     </div>

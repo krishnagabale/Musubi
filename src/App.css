@@ -1,3 +1,7 @@
+/* *{
+  overflow-y: hidden;
+  overflow-x: hidden;
+} */
 .slick-list {
   position: relative;
   display: block;
