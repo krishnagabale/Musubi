@@ -7,11 +7,13 @@ export const Parntners = () => {
       <h1 className="my-5 font-bold text-5xl text-green-900 justify-center text-center items-center">
         Some of Our Parntners
       </h1>
-      <div className="flex justify-center">
+      <div className="flex justify-center m-10">
         {/* Partner Logos */}
         <div className="flex">
-          <img src={partner1} alt="Partner 1" className="h-16 mr-4" />
-          <img src={partner1} alt="Partner 2" className="h-16" />
+          <img src={partner1} alt="Partner 1" className="h-16 mr-12" />
+          <img src={partner1} alt="Partner 2" className="h-16 mr-12" />
+          <img src={partner1} alt="Partner 1" className="h-16 mr-12" />
+          <img src={partner1} alt="Partner 2" className="h-16 mr-12" />
         </div>
       </div>
       <div className="mx-auto w-4/5 bg-gradient-to-r from-green-800 to-green-950 p-6 rounded-xl flex items-center">
