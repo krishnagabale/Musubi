@@ -26,20 +26,18 @@ export const AccordinoPage = () => {
     },
   ];
   return (
-    <div className="bg-green-800 relative w-screen h-full p-4 pb-8">
-      <h1 className="font-bold text-xl text-center items-center justify-center text-white pt-2">
+    <div className="bg-green-800 relative w-screen h-full p-5">
+      <h1 className="font-bold text-lg md:text-xl text-center items-center justify-center text-white pt-10">
         --Benefits--
       </h1>
-      <h1 className="my-5 font-bold text-5xl text-white justify-center text-center items-center">
-        Avocado ipsum dolor meat
-        <br />
-        lovers buffalo. Pan NY
+      <h1 className="my-5 font-bold md:text-5xl text-3xl text-white justify-center text-center items-center">
+      Estimated Hass Avocado Returns<br /> per acre
       </h1>
       <div className="flex flex-col md:flex-row items-center justify-center mx-auto w-4/5">
-        <div className="pt-6 w-1/2 md:p-4 text-center gap-7 rounded-2xl bg-green-800 mx-10">
-          <img src={worldcircle} className="rounded-3xl" />
+        <div className="pt-6 w-full md:w-1/2 md:p-4 text-center gap-7 rounded-2xl bg-green-800 mx-10">
+          <img src={worldcircle} className="rounded-3xl md:mt-5" />
         </div>
-        <div className="w-full md:w-1/2 mx-5">
+        <div className="w-full md:w-1/2 mx-5 my-5">
           {accordionData.map((item, index) => (
             <Accordion key={index} title={item.title}>
               {item.content}

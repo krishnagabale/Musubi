@@ -7,18 +7,21 @@ import Benefits3 from "../assets/Benefits3.png";
 export const Benfits = () => {
   return (
     <div className="bg-gray-200 mt-12 w-screen h-full">
-      <h1 className="font-bold text-xl bg-gray-200 text-center items-center justify-center">
+      <h1 className="font-bold text-lg md:text-xl bg-gray-200 text-center items-center justify-center">
         --Benefits--
       </h1>
 
       {/* --column1-- */}
-      <div className="flex flex-col md:flex-row items-center justify-center w-4/5 mx-auto">
-        <img src={Benefits1} alt="" />
+      <div className="flex flex-col md:flex-row items-center justify-center w-4/5 mx-auto my-10 md:my-0">
+        <img src={Benefits1} alt="" className="w-3/4 md:w-full" />
         <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
-          <h1 className="my-5 font-bold text-5xl text-green-900">
-            Avocado ipsum dolor 
-            <div>meat.</div>
+          <h1 className="my-5 font-bold text-3xl md:text-5xl text-green-900">
+            Avocado ipsum dolor <br />
+            meat.
           </h1>
+          {/* <h1 className="my-5 font-bold text-3xl md:text-5xl text-green-900">
+            Avocado ipsum dolo meat.
+          </h1> */}
           <p className="w-full">
             Avocado ipsum dolor meat lovers buffalo. Cheese anchovies large
             large tomato fresh. Bianca personal roll pizza meat meatball.
@@ -29,13 +32,16 @@ export const Benfits = () => {
       </div>
 
       {/* --column2-- */}
-      <div className="flex flex-col md:flex-row items-center justify-center w-4/5 mx-auto">
+      <div className="flex flex-col md:flex-row items-center justify-center w-4/5 mx-auto my-10 md:my-0">
         
         <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
-          <h1 className="my-5 font-bold text-5xl text-green-900">
-            Avocado ipsum dolor 
-            <div>meat.</div>
+        <h1 className="my-5 font-bold text-3xl md:text-5xl text-green-900">
+            Avocado ipsum dolor <br />
+            meat.
           </h1>
+          {/* <h1 className="my-5 font-bold text-3xl md:text-5xl text-green-900">
+            Avocado ipsum dolo meat.
+          </h1> */}
           <p className="w-full">
             Avocado ipsum dolor meat lovers buffalo. Cheese anchovies large
             large tomato fresh. Bianca personal roll pizza meat meatball.
@@ -43,17 +49,20 @@ export const Benfits = () => {
             chicken pesto pesto anchovies garlic broccoli.
           </p>
         </div>
-        <img class="" src={Benefits2} alt=""></img>
+        <img src={Benefits2} alt="" className="w-3/4 md:w-full order-first md:order-last"></img>
       </div>
 
       {/* --column3-- */}
-      <div className="flex flex-col md:flex-row items-center justify-center w-4/5 mx-auto">
-        <img class="" src={Benefits3} alt=""></img>
+      <div className="flex flex-col md:flex-row items-center justify-center w-4/5 mx-auto my-10 md:my-0">
+        <img src={Benefits3} alt="" className="w-3/4 md:w-full"></img>
         <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
-          <h1 className="my-5 font-bold text-5xl text-green-900">
-            Avocado ipsum dolor
-            <div>meat.</div>
+        <h1 className="my-5 font-bold text-3xl md:text-5xl text-green-900">
+            Avocado ipsum dolor <br />
+            meat.
           </h1>
+          {/* <h1 className="my-5 font-bold text-3xl md:text-5xl text-green-900">
+            Avocado ipsum dolo meat.
+          </h1> */}
           <p className="w-full">
             Avocado ipsum dolor meat lovers buffalo. Cheese anchovies large
             large tomato fresh. Bianca personal roll pizza meat meatball.
