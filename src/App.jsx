@@ -9,6 +9,7 @@ import { Sustainability } from './Components/Sustainability'
 import { Happening } from './Components/Happening'
 import MapWithPopups from './Components/MapWithPopups'
 import { Products } from './Components/Products'
+import { OurProducts } from './Components/OurProducts'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Benfits/>
       <Sustainability/>
       <Products />
+      <OurProducts/>
       <Happening/>
       <MapWithPopups />
       <Footer/>
