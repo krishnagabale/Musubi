@@ -31,7 +31,7 @@ export const Parntners = () => {
           <h2 className="text-white text-4xl md:text-5xl font-semibold mb-2">
             Avocado ipsum <br /> dolor meat
           </h2>
-          <p className="text-white text-md">
+          <p className="text-white text-md py-2 md:py-2">
             Pizza ipsum dolor meat lovers buffalo. Cheese <br /> anchovies large large
             tomato fresh. Bianca personal roll <br /> pizza meat meatball
           </p>

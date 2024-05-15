@@ -5,7 +5,7 @@ import AboutBanner from '../assets/AboutUs.png'
 const AboutUsPage = () => {
   return (
     <div className="flex justify-center w-screen h-full bg-gray-200 mt-10">
-      <div className="w-4/5 flex flex-col items-center">
+      <div className="w-full md:w-4/5 flex flex-col items-center p-3 md:p-0">
         <h1 className="my-5 md:my-5 font-bold text-lg md:text-xl">--About Us--</h1>
         <h1 className="font-bold text-3xl md:text-5xl text-green-900 text-center">
           Avocado ipsum dolor meat<br />
@@ -23,7 +23,7 @@ const AboutUsPage = () => {
           buffalo style tomatoes. Beef pepperoni bell NY peppers Bianca bacon
           mayo. Ham lovers crust crust fresh thin roll beef bell. Wing.
         </p>
-        <img src={AboutBanner} className="my-5"/>
+        <img src={AboutBanner} className="my-5 h-56 md:h-full"/>
       </div>
     </div>
   );
