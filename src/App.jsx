@@ -1,35 +1,26 @@
-import { useState } from 'react'
 import './App.css'
-import Header from './Components/Header'
-import Banner from './Components/Banner'
-import AboutUsPage from './Components/AboutUs'
-import Footer from './Components/Footer'
-import { Benfits } from './Components/Benefits'
-import { Sustainability } from './Components/Sustainability'
-import { Happening } from './Components/Happening'
-import MapWithPopups from './Components/MapWithPopups'
-import { Products } from './Components/Products'
-import { OurProducts } from './Components/OurProducts'
-import { AccordinoPage } from './Components/AccordinoPage'
-import { Parntners } from './Components/Parntners'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { LandingPage } from './Components/LandingPage'
+import { ContactUs } from './Components/ContactUs'
+import { ProductsPage } from './Components/ProductsPage/ProductsPage'
+import {AboutUsPage} from './Components/AboutUsPage/AboutUsPage'
+import { Process } from './Components/Processes/Processes'
 
 function App() {
 
   return (
-    <div className="bg-gray-200 w-full overflow-hidden">
-      {/* <Header /> */}
-      <Banner />
-      <AboutUsPage/>
-      <Benfits/>
-      <Products />
-      <Sustainability/>
-      <OurProducts/>
-      <Happening/>
-      <AccordinoPage />
-      <Parntners />
-      <MapWithPopups />
-      <Footer/>
-    </div>
+    <Router>
+    <Routes>
+    <Route path="/" element={<LandingPage />} />
+    <Route path="/products" element={<ProductsPage/>} />
+     <Route path="/aboutus" element={<AboutUsPage />} />
+
+    {/* {/* <Route path="/FindStation" element={<FindStation />} /> */}
+    <Route path="/processes" element={<Process />} />   
+    <Route path="/contactus" element={<ContactUs/>} />
+
+    </Routes>
+    </Router>
   )
 }
 

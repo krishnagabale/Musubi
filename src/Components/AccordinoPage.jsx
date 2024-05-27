@@ -26,7 +26,7 @@ export const AccordinoPage = () => {
     },
   ];
   return (
-    <div className="bg-green-800 relative w-screen h-full p-5">
+    <div className=" bg-customGreen relative w- h-full p-5">
       <h1 className="font-bold text-lg md:text-xl text-center items-center justify-center text-white pt-10">
         --Benefits--
       </h1>
@@ -34,7 +34,7 @@ export const AccordinoPage = () => {
       Estimated Hass Avocado Returns<br /> per acre
       </h1>
       <div className="flex flex-col md:flex-row items-center justify-center mx-auto w-4/5">
-        <div className="pt-6 w-full md:w-1/2 md:p-4 text-center gap-7 rounded-2xl bg-green-800 mx-10">
+        <div className="pt-6 w-full md:w-1/2 md:p-4 text-center gap-7 rounded-2xl  bg-customGreen mx-10">
           <img src={worldcircle} className="rounded-3xl md:mt-5" />
         </div>
         <div className="w-full md:w-1/2 mx-5 my-5">

@@ -8,7 +8,7 @@ const Accordion = ({ title, children }) => {
   };
 
   return (
-    <div className={`border-green-950 rounded-2xl mb-4 ${isOpen ? 'bg-green-900 border-none' : 'bg-green-800 border'} relative z-10`}>
+    <div className={`border-customGreen rounded-2xl mb-4 ${isOpen ? ' bg-green-900 border-none' : 'bg-customGreen border border-green-950'} relative z-10`}>
       {/* Accordion Header */}
       <div
         className="flex items-center justify-between p-4 cursor-pointer"
