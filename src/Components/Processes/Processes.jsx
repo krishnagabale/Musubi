@@ -10,7 +10,7 @@ export const Process = () => {
   return (
     <>
       <Header />
-      <div className="mt-10 pt-28 md:w-full">
+      <div className="mt-24  md:w-full">
         <h1 className="font-bold text-lg md:text-xl text-center items-center justify-center">
           --Agricultural Process--
         </h1>
@@ -18,7 +18,7 @@ export const Process = () => {
         <h1 className="my-5 font-bold text-5xl md:text-5xl text-green-900 justify-center text-center items-center">
           Avocado ipsum dolor meat
         </h1>
-        <p className="w-3/5 md:w-3/5 md:mx-auto justify-center text-center items-center mx-auto">
+        <p className="w-full p-2 md:p-0 md:w-3/5 md:mx-auto justify-center text-center items-center mx-auto">
           Avocado ipsum dolor meat lovers buffalo. Cheese anchovies large large
           tomato fresh. Bianca personal roll pizza meat meatball. Meatball ranch
           hand lasagna anchovies. Platter beef thin burnt chicken pesto pesto

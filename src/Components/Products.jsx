@@ -3,8 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Product1 from "../assets/Product_1.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Importing FontAwesome icons
 import { useMediaQuery } from 'react-responsive';
 
 export const Products = () => {
@@ -14,11 +13,11 @@ export const Products = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={className}
-        style={{ ...style, display: "block", background: "red" }}
+        className={`${className} bg-gray-500 bg-opacity-50 absolute right-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 rounded-full hover:bg-opacity-75`} // Improved styling for hover effect
+        style={{ ...style }}
         onClick={onClick}
       >
-        <FontAwesomeIcon icon={faAngleRight} />
+        <FaArrowRight className="text-white text-xl" />
       </div>
     );
   };
@@ -27,11 +26,11 @@ export const Products = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={className}
-        style={{ ...style, display: "block", background: "green" }}
+        className={`${className} bg-gray-500 bg-opacity-50 absolute left-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 rounded-full hover:bg-opacity-75`} // Improved styling for hover effect
+        style={{ ...style }}
         onClick={onClick}
       >
-        <FontAwesomeIcon icon={faAngleLeft} />
+        <FaArrowLeft className="text-white text-xl" />
       </div>
     );
   };
@@ -40,48 +39,33 @@ export const Products = () => {
     {
       id: 1,
       image: Product1,
-      title: "01  Our Avocado Trees",
+      title: "01 Our Avocado Trees",
       subtitle:
         "Pizza ipsum dolor meat lovers buffalo. Cheese anchovies large large tomato fresh. Bianca personal roll pizza meat meatball. Meatball ranch hand lasagna anchovies.",
     },
     {
       id: 2,
       image: Product1,
-      title: "01  Our Avocado Trees",
+      title: "01 Our Avocado Trees",
       subtitle:
         "Pizza ipsum dolor meat lovers buffalo. Cheese anchovies large large tomato fresh. Bianca personal roll pizza meat meatball. Meatball ranch hand lasagna anchovies.",
     },
     {
       id: 3,
       image: Product1,
-      title: "01  Our Avocado Trees",
+      title: "01 Our Avocado Trees",
       subtitle:
         "Pizza ipsum dolor meat lovers buffalo. Cheese anchovies large large tomato fresh. Bianca personal roll pizza meat meatball. Meatball ranch hand lasagna anchovies.",
     },
-    {
-      id: 4,
-      image: Product1,
-      title: "01  Our Avocado Trees",
-      subtitle:
-        "Pizza ipsum dolor meat lovers buffalo. Cheese anchovies large large tomato fresh. Bianca personal roll pizza meat meatball. Meatball ranch hand lasagna anchovies.",
-    },
-    {
-      id: 5,
-      image: Product1,
-      title: "01  Our Avocado Trees",
-      subtitle:
-        "Pizza ipsum dolor meat lovers buffalo. Cheese anchovies large large tomato fresh. Bianca personal roll pizza meat meatball. Meatball ranch hand lasagna anchovies.",
-    },
+    // Add more slides as needed
   ];
 
   const settings = {
     className: "slider variable-width",
-    dots: false,
-    arrows: true,
-    prevArrow: <PrevArrow />, // Custom component for previous arrow
-    nextArrow: <NextArrow />, // Custom component for next arrow
-    infinite: false,
-    slidesToScroll: 1,
+    dots: false, // Hide dots indicator for cleaner look
+    arrows: true, // Enable navigation arrows
+    infinite: false, // Disable infinite looping
+    slidesToScroll: 1, // Transition one slide at a time
     slidesToShow: isMobile ? 1 : 1.25,
   };
 
@@ -93,13 +77,13 @@ export const Products = () => {
             Avocado ipsum dolor meat lovers buffalo. Pan NY.
           </h1>
         </div>
-        <div className="w-full md:w-1/2 mx-4 md:mx-10">
+        <div className="w-full md:w-1/2 mx-4 md:mx-10 relative">
           <Slider {...settings}>
             {slides.map((slide) => (
-              <div key={slide.id} className="p-4">
-                <div className="bg-gray-200 p-8 rounded-3xl border-gray-500 border-2">
+              <div key={slide.id} className="p-2">
+                <div className="bg-gray-200 md:p-4 p-4 rounded-3xl border-gray-500 border-2">
                   <img src={slide.image} alt="" />
-                  <h2 className="text-2xl md:text-3xl font-bold text-green-900">
+                  <h2 className="text-xl md:text-3xl mt-4 font-bold text-green-900">
                     {slide.title}
                   </h2>
                   <p className="text-sm text-green-900">{slide.subtitle}</p>
@@ -108,6 +92,10 @@ export const Products = () => {
             ))}
           </Slider>
         </div>
+      </div>
+      <div className="absolute left-1/2 -bottom-6 md:mx-80">
+        <PrevArrow className="text-white" />
+        <NextArrow className="text-white" />
       </div>
     </div>
   );

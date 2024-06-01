@@ -6,8 +6,11 @@ import background from "../../assets/CardBox.png";
 import RightSideImage from "../../assets/aboutus1.png"; // Replace with the actual image path
 import Sustain1 from "../../assets/Sustainability1.png";
 import DevonLane from '../../assets/DevonLane.png'
+import AboutusMob from '../../assets/AboutusMob.png'
+import useMobileView from '../useMobile';
 
 export const AboutUsPage = () => {
+  const isMobile = useMobileView();
   const images = [
     {
       url: Sustain1,
@@ -40,17 +43,17 @@ export const AboutUsPage = () => {
   return (
     <>
       <Header />
-      <div className="relative md:my-36">
+      <div className="relative md:mt-24">
         <img
-          src={AboutUsPageImg}
+           src={isMobile ? AboutusMob : AboutUsPageImg}
           alt="about"
-          className="w-full md:w-auto md:mx-36"
+          className="w-full p-2 md:w-auto md:mx-36 md:mt-10 mt-20"
         />
-        <div className="absolute inset-0 flex flex-col justify-start md:my-16 items-center text-center text-white">
-          <h1 className="text-3xl md:text-6xl font-bold">
+        <div className="absolute inset-0 flex flex-col justify-start mt-20 md:my-16 items-center text-center text-white">
+          <h1 className="text-2xl md:text-6xl font-bold p-4">
             Avocado ipsum dolor meat
           </h1>
-          <p className="text-lg md:text-md mt-2 md:mt-4 md:w-4/5 md:pr-16 md:pl-8">
+          <p className="text-md md:text-md mt-2 md:mt-4 md:w-4/5 md:pr-16 p-2 md:pl-8">
             Avocado ipsum dolor meat lovers buffalo. Cheese anchovies large
             large tomato fresh. Bianca personal roll pizza meat meatball.
             Meatball ranch hand lasagna anchovies. Platter beef thin burnt
@@ -59,8 +62,8 @@ export const AboutUsPage = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-start my-20 p-10 rounded-lg">
-        <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+      <div className="flex flex-col md:flex-row items-center justify-start my-10 md:p-10 p-2 rounded-lg">
+        <div className="md:w-1/2 p-2 md:mt-0 flex justify-center">
           <img
             src={RightSideImage}
             alt="Right side content"
@@ -92,7 +95,7 @@ export const AboutUsPage = () => {
           </ul>
         </div>
       </div>
-      <div className="p-10 md:p-5 mx-auto">
+      <div className="p-2 md:p-5 mx-auto">
         <div className="flex flex-wrap justify-center">
           {images.map((image, index) => (
             <div

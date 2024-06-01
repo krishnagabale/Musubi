@@ -11,6 +11,8 @@ import { OurProducts } from '../Components/OurProducts'
 import { AccordinoPage } from '../Components/AccordinoPage'
 import { Parntners } from '../Components/Parntners'
 import MapWithPins from './MapWithPins'
+import { ContactUs } from './ContactUs'
+import { ContactUsCard } from './ContactUsCard'
 
 export const LandingPage = () => {
   useEffect(() => {
@@ -25,11 +27,15 @@ export const LandingPage = () => {
         <Benefits/>
         <Products />
         <Sustainability/>
+        <MapWithPins />
         <OurProducts/>
         <Happening/>
+        
         <AccordinoPage />
+        
         <Parntners />
-        <MapWithPins />
+        <ContactUsCard/>
+        
         {/* <MapWithPopups /> */}
         <Footer/>
       </div>

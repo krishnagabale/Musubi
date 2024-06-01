@@ -1,0 +1,73 @@
+/* Define a CSS class for the transparent dot pattern overlay */
+.bg-transparentDotPattern {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+    background-size: 10px 10px;
+    opacity: 0.3; /* Adjust the opacity to make it thin and transparent */
+}
+
+/* Additional styles for the video */
+.object-cover {
+    object-fit: cover;
+}
+
+/* Ensure the video and overlays cover the entire container */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style for text overlay */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .md\\:text-5xl {
+        font-size: 3rem;
+    }
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+/* Adjusting height for mobile view */
+@media (max-width: 767px) {
+    .h-screen {
+        height: auto;
+    }
+}

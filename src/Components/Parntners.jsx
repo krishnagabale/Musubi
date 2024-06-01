@@ -8,7 +8,7 @@ import Partner6 from '../assets/Naads.png'
 
 export const Parntners = () => {
   return (
-    <div className="bg-white md:p-12 py-10 w-screen h-full">
+    <div className="bg-gary-100 md:p-12 py-10 w-screen h-full">
       <h1 className="font-bold text-3xl md:text-5xl text-green-900 justify-center text-center items-center">
         Some of Our Parntners
       </h1>
@@ -25,8 +25,8 @@ export const Parntners = () => {
 
         </div>
       </div>
-      <div className="mx-auto w-4/5 bg-gradient-to-r from-green-800 to-green-950 p-6 rounded-xl flex flex-col md:flex-row items-center">
-        {/* Left side content */}
+      {/* <div className="mx-auto w-4/5 bg-gradient-to-r from-green-800 to-green-950 p-6 rounded-xl flex flex-col md:flex-row items-center">
+       
         <div className="w-full md:w-1/2 p-4">
           <h2 className="text-white text-4xl md:text-5xl font-semibold mb-2">
             Avocado ipsum <br /> dolor meat
@@ -36,7 +36,6 @@ export const Parntners = () => {
             tomato fresh. Bianca personal roll <br /> pizza meat meatball
           </p>
         </div>
-        {/* Right side content */}
         <div className="w-full md:w-1/2 md:ml-6 p-4">
           <input
             type="text"
@@ -44,7 +43,7 @@ export const Parntners = () => {
             placeholder="Email"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

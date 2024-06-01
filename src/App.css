@@ -39,3 +39,16 @@
   height: 100%;
   content: "";
 }
+/* Example CSS */
+@font-face {
+  font-family: 'Axiforma';
+  src: url('../fonts/Axiforma-Regular.woff2') format('woff2'),
+       url('../fonts/Axiforma-Regular.woff') format('woff');
+  /* Add more font formats if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Axiforma', sans-serif;
+}

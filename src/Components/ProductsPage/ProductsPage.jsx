@@ -23,7 +23,7 @@ export const ProductsPage = () => {
         <h1 className="my-5 font-bold text-5xl md:text-5xl text-green-900 justify-center text-center items-center">
           Avocado ipsum dolor meat
         </h1>
-        <p className="w-3/5 md:w-3/5 md:mx-auto justify-center text-center items-center mx-auto">
+        <p className="w-full p-4 md:w-3/5 md:mx-auto justify-center text-center items-center mx-auto">
           Avocado ipsum dolor meat lovers buffalo. Cheese anchovies large large
           tomato fresh. Bianca personal roll pizza meat meatball. Meatball ranch
           hand lasagna anchovies. Platter beef thin burnt chicken pesto pesto
@@ -74,7 +74,7 @@ export const ProductsPage = () => {
         </div>
         <div className="bg-customGreen flex flex-col md:flex-row justify-between items-center mx-4 my-8 rounded-lg">
           {/* Image on the left */}
-          <div className="text-white w-full md:w-1/2 md:pl-10 md:mx-20">
+          <div className="text-white w-full p-4 md:w-1/2 md:pl-10 md:mx-20">
             <h2 className="text-3xl md:text-6xl font-bold">
               Avocado ipsum dolor meat lovers
             </h2>
@@ -133,9 +133,6 @@ export const ProductsPage = () => {
             </button>
           </form>
         </div>
-
-        {/* New section with green background */}
-        
       </div>
 
       <Footer />
