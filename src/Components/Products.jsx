@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,29 +8,40 @@ import { useMediaQuery } from 'react-responsive';
 
 export const Products = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
+  const sliderRef = useRef(null);
+  const [prevArrowClicked, setPrevArrowClicked] = useState(false);
+  const [nextArrowClicked, setNextArrowClicked] = useState(false);
 
   const NextArrow = (props) => {
-    const { className, style, onClick } = props;
+    const { className, style } = props;
     return (
       <div
-        className={`${className} bg-gray-500 bg-opacity-50 absolute right-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 rounded-full hover:bg-opacity-75`} // Improved styling for hover effect
+        className={`${className} bg-gray-500 bg-opacity-50 absolute right-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 rounded-full hover:bg-opacity-75 ${nextArrowClicked ? 'bg-green-800' : ''}`} // Added conditional class for green color
         style={{ ...style }}
-        onClick={onClick}
+        onClick={() => {
+          sliderRef.current.slickPrev();
+          setNextArrowClicked(true);
+          setPrevArrowClicked(false);
+        }}
       >
-        <FaArrowRight className="text-white text-xl" />
+        <FaArrowLeft className="text-white text-xl" />
       </div>
     );
   };
 
   const PrevArrow = (props) => {
-    const { className, style, onClick } = props;
+    const { className, style } = props;
     return (
       <div
-        className={`${className} bg-gray-500 bg-opacity-50 absolute left-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 rounded-full hover:bg-opacity-75`} // Improved styling for hover effect
+        className={`${className} bg-gray-500 bg-opacity-50 absolute left-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer p-2 rounded-full hover:bg-opacity-75 ${prevArrowClicked ? 'bg-green-800' : ''}`} // Added conditional class for green color
         style={{ ...style }}
-        onClick={onClick}
+        onClick={() => {
+          sliderRef.current.slickNext();
+          setNextArrowClicked(false);
+          setPrevArrowClicked(true);
+        }}
       >
-        <FaArrowLeft className="text-white text-xl" />
+        <FaArrowRight className="text-white text-xl" />
       </div>
     );
   };
@@ -62,10 +73,10 @@ export const Products = () => {
 
   const settings = {
     className: "slider variable-width",
-    dots: false, // Hide dots indicator for cleaner look
-    arrows: true, // Enable navigation arrows
-    infinite: false, // Disable infinite looping
-    slidesToScroll: 1, // Transition one slide at a time
+    dots: false,
+    arrows: false,
+    infinite: false,
+    slidesToScroll: 1,
     slidesToShow: isMobile ? 1 : 1.25,
   };
 
@@ -78,7 +89,7 @@ export const Products = () => {
           </h1>
         </div>
         <div className="w-full md:w-1/2 mx-4 md:mx-10 relative">
-          <Slider {...settings}>
+          <Slider ref={sliderRef} {...settings}>
             {slides.map((slide) => (
               <div key={slide.id} className="p-2">
                 <div className="bg-gray-200 md:p-4 p-4 rounded-3xl border-gray-500 border-2">
@@ -93,10 +104,13 @@ export const Products = () => {
           </Slider>
         </div>
       </div>
-      <div className="absolute left-1/2 -bottom-6 md:mx-80">
+      {
+        isMobile ? '' : ( <div className="absolute left-1/2 -bottom-6 md:mx-80">
         <PrevArrow className="text-white" />
-        <NextArrow className="text-white" />
-      </div>
+        <NextArrow className="text-white md:mr-2" />
+      </div>)
+      }
+     
     </div>
   );
 };

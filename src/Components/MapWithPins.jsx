@@ -46,7 +46,7 @@ const MapWithPins = () => {
 
         {/* Map and Pins */}
         <div className="relative">
-          <img src={MapImage} alt="Map" className="w-full h-auto" />
+          <img src={MapImage} alt="Map" className="w-full h-auto" style={{ maxWidth: '100%', height: 'auto' }} />
           <div className="absolute inset-0 bg-customGreen opacity-50"></div>
         </div>
         {locations.map(location => (
@@ -55,17 +55,17 @@ const MapWithPins = () => {
             src={PinIcon}
             alt="Pin"
             className="absolute cursor-pointer"
-            style={{ left: location.x, top: location.y }}
+            style={{ left: location.x, top: location.y, width: '30px', height: 'auto' }}
             onClick={() => handlePinClick(location)}
           />
         ))}
         {selectedLocation && (
-          <div className="absolute w-1/5 bg-white rounded-2xl shadow-lg"
+          <div className="absolute md:w-1/5 w-1/3 bg-white rounded-2xl shadow-lg"
             style={{ left: selectedLocation.x, top: `calc(${selectedLocation.y} - 150px)` }}>
             <img
               src={selectedLocation.image}
               alt={selectedLocation.title}
-              className="w-15 h-15 rounded-t-lg border-gray-400" // Add rounded top border here
+              className="w-15 h-15 rounded-t-lg border-gray-400" 
             />
             <h3 className="text-xl font-bold mb-2 mx-2">{selectedLocation.title}</h3>
             <p className="text-md mb-2 mx-2">{selectedLocation.subtitle}</p>
