@@ -43,7 +43,7 @@ const MapWithPins = () => {
           <h1 className="text-3xl md:text-5xl font-bold text-white md:mt-14">Avocado ipsum dolor meat lovers</h1>
           <p className="text-md md:text-md text-white md:mt-4">Pizza ipsum dolor meat lovers buffalo. Cheese anchovies large large tomato fresh. Bianca personal roll pizza meat meatball. Meatball ranch hand lasagna anchovies.</p>
         </div>
-        
+
         {/* Map and Pins */}
         <div className="relative">
           <img src={MapImage} alt="Map" className="w-full h-auto" />
@@ -60,12 +60,15 @@ const MapWithPins = () => {
           />
         ))}
         {selectedLocation && (
-          <div className="absolute bg-white rounded-2xl shadow-lg p-4"
-               style={{ left: selectedLocation.x, top: `calc(${selectedLocation.y} - 150px)` }}>
-            <img src={selectedLocation.image} alt={selectedLocation.title} className="w-72 h-30 object-cover mb-2 rounded-xl" />
-            <h3 className="text-xl font-bold mb-2">{selectedLocation.title}</h3>
-            <p className="text-md mb-2">{selectedLocation.subtitle}</p>
-            <p className="text-md mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div className="absolute w-1/5 bg-white rounded-2xl shadow-lg"
+            style={{ left: selectedLocation.x, top: `calc(${selectedLocation.y} - 150px)` }}>
+            <img
+              src={selectedLocation.image}
+              alt={selectedLocation.title}
+              className="w-15 h-15 rounded-t-lg border-gray-400" // Add rounded top border here
+            />
+            <h3 className="text-xl font-bold mb-2 mx-2">{selectedLocation.title}</h3>
+            <p className="text-md mb-2 mx-2">{selectedLocation.subtitle}</p>
           </div>
         )}
       </div>

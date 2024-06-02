@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <>
             <Header />
-            <div className="relative w-full h-screen mt-28 md:mt-0 overflow-hidden">
+            <div className="relative w-full h-screen mt-28 md:mt-10 overflow-hidden">
                 <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
                     <source src={BannerVideo} type="video/mp4" />
                     {/* Add additional source tags for different video formats if needed */}

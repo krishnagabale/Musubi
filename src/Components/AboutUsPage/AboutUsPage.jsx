@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Header from "../Header";
 import Footer from "../Footer";
 import AboutUsPageImg from "../../assets/AboutUsPageimg.png";
-import background from "../../assets/CardBox.png";
-import RightSideImage from "../../assets/aboutus1.png"; // Replace with the actual image path
+import RightSideImage from "../../assets/aboutus1.png";
 import Sustain1 from "../../assets/Sustainability1.png";
-import DevonLane from '../../assets/DevonLane.png'
-import AboutusMob from '../../assets/AboutusMob.png'
-import useMobileView from '../useMobile';
+import DevonLane from "../../assets/DevonLane.png";
+import AboutusMob from "../../assets/AboutusMob.png";
+import useMobileView from "../useMobile";
+import { ContactUsCard } from "../ContactUsCard";
 
 export const AboutUsPage = () => {
   const isMobile = useMobileView();
@@ -28,16 +28,6 @@ export const AboutUsPage = () => {
     // Add more image URLs, titles, and subtitles here
   ];
 
-  const employeimg = [
-    {
-      url: DevonLane,
-      text: "Environmental Practices",
-      subtitle:
-        "",
-    },
-  ]
-
-
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
@@ -45,7 +35,7 @@ export const AboutUsPage = () => {
       <Header />
       <div className="relative md:mt-24">
         <img
-           src={isMobile ? AboutusMob : AboutUsPageImg}
+          src={isMobile ? AboutusMob : AboutUsPageImg}
           alt="about"
           className="w-full p-2 md:w-auto md:mx-36 md:mt-10 mt-20"
         />
@@ -95,7 +85,7 @@ export const AboutUsPage = () => {
           </ul>
         </div>
       </div>
-      <div className="p-2 md:p-5 mx-auto">
+      <div className="p-2 md:p-5 mx-auto overflow-x-auto">
         <div className="flex flex-wrap justify-center">
           {images.map((image, index) => (
             <div
@@ -124,7 +114,7 @@ export const AboutUsPage = () => {
           ))}
         </div>
       </div>
-            <div className="mt-10 w-screen h-full">
+      <div className="mt-10">
         <h1 className="font-bold text-lg md:text-xl text-center items-center justify-center">
           --Our Products--
         </h1>
@@ -136,17 +126,14 @@ export const AboutUsPage = () => {
           {/* --column1-- */}
           <div className="max-w-sm mx-4 rounded overflow-hidden mr-4">
             <img
-              class="w-full"
+              className="w-full"
               src={DevonLane}
               alt="Sunset in the mountains"
             />
-             <div className="px-2">
+            <div className="px-2">
               <h1 className="font-bold text-xl mb-2">Lorem ipsum </h1>
-              <p className="text-gray-700 text-base">
-              CTO(Founder)
-              </p>
+              <p className="text-gray-700 text-base">CTO(Founder)</p>
             </div>
-            
           </div>
 
           {/* --column2-- */}
@@ -156,13 +143,10 @@ export const AboutUsPage = () => {
               src={DevonLane}
               alt="Sunset in the mountains"
             />
-             <div className="px-2">
+            <div className="px-2">
               <h1 className="font-bold text-xl mb-2">Lorem ipsum </h1>
-              <p className="text-gray-700 text-base">
-              CTO(Founder)
-              </p>
+              <p className="text-gray-700 text-base">CTO(Founder)</p>
             </div>
-            
           </div>
 
           {/* --column3-- */}
@@ -174,11 +158,8 @@ export const AboutUsPage = () => {
             />
             <div className="px-2">
               <h1 className="font-bold text-xl mb-2">Lorem ipsum </h1>
-              <p className="text-gray-700 text-base">
-              CTO(Founder)
-              </p>
+              <p className="text-gray-700 text-base">CTO(Founder)</p>
             </div>
-            
           </div>
           <div className="max-w-sm mx-4 rounded overflow-hidden mr-4">
             <img
@@ -188,54 +169,14 @@ export const AboutUsPage = () => {
             />
             <div className="px-2">
               <h1 className="font-bold text-xl mb-2">Lorem ipsum </h1>
-              <p className="text-gray-700 text-base">
-              CTO(Founder)
-              </p>
+              <p className="text-gray-700 text-base">CTO(Founder)</p>
             </div>
-            
           </div>
-
         </div>
       </div>
-      <div
-        className="p-10 md:w-4/5 md:mx-36 flex flex-col md:flex-row justify-between items-center mx-4 my-8 rounded-lg bg-cover bg-center"
-        style={{ backgroundImage: `url(${background})` }}
-      >
-        <div className="text-white w-full md:w-1/2 md:pl-10 mt-10 md:mt-0">
-          <h2 className="text-3xl md:text-6xl font-bold">
-            Avocado ipsum dolor meat.
-          </h2>
-          <p className="mt-2 text-lg md:mb-14">
-            Pizza ipsum dolor meat lovers buffalo. Cheese anchovies large large
-            tomato fresh. Bianca personal roll pizza meat meatball.
-          </p>
-        </div>
-        {/* Form */}
-        <form className="flex flex-col w-full md:w-2/5 space-y-4 mt-6 md:mt-0">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="bg-transparent border-b-2 border-white text-white px-4 py-2 focus:outline-none"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="bg-transparent border-b-2 border-white text-white px-4 py-2 focus:outline-none"
-          />
-          <input
-            type="text"
-            placeholder="Your Message"
-            className="bg-transparent border-b-2 border-white text-white px-4 py-2 focus:outline-none"
-          />
-          <button
-            type="submit"
-            className="border-2 border-white text-white px-4 py-2 rounded-full hover:bg-white hover:text-green-600 transition duration-300"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+      <ContactUsCard />
       <Footer />
     </>
   );
 };
+

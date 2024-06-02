@@ -5,7 +5,7 @@ import Benefits3 from "../assets/Benefits3.png";
 
 export const Benefits = () => {
   return (
-    <div className="bg-gray-200 mt-12 w-screen h-full">
+    <div className="bg-gray-200 w-screen h-full">
       <h1 className="font-bold text-lg md:text-xl bg-gray-200 text-center items-center justify-center">
         --Benefits--
       </h1>
